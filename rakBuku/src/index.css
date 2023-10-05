@@ -1,0 +1,156 @@
+:root{
+     --primary : #053B50;
+     --secondary :#176B87;
+     --tertiary :#64CCC5;
+     --quaternary:#EEEEEE;
+
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+*{
+     box-sizing: border-box;
+     padding:0;
+     margin :0;
+}
+
+header nav{
+     width:100vw;
+     height:10vh;
+     background-color: var(--primary);
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     color:var(--quaternary)
+}
+
+
+main #content{
+     display:flex;
+     padding:20px;
+     width:100vw;
+     height:90vh;
+     background-color: var(--quaternary);
+     gap:20px;
+}
+
+main .formBook{
+     border-radius: 5px;;
+     background-color: var(--secondary);
+     flex-grow:.8;
+     height:max-content;
+}
+
+.formBook form{
+     width:100%;
+     display:flex;
+     gap:10px;
+     flex-direction: column;
+     padding:20px;
+}
+
+.check{
+     display: flex;
+     gap:10px;
+     font-size: small;
+}
+form >input{
+     padding:5px;
+}
+
+form > input,button{
+     width:100%;
+     height:30px;
+}
+main .shelf-book{
+     flex-grow: 1;
+     display:flex;
+     flex-direction: column;
+     justify-content: left;
+     align-items: center;
+     
+}
+
+main .shelf-book h3{
+     color:var(--primary);
+}
+
+main .shelf-book #list-incomplete,#list-complete{
+     width:100%;
+     height:100%;
+     margin-top: 20px;
+     /* background-color: var(--primary); */
+     overflow-y: scroll;
+     padding:10px;
+}
+
+main .shelf-book .card{
+     border-radius: 7px;
+     background-color: var(--secondary);
+     width:100%;
+     height:max-content;
+     padding :20px;
+     line-height: 2;
+     box-shadow: 0 0 10px var(--secondary);
+}
+
+main .shelf-book .card .btn-card{
+     display:flex;
+     gap:10px;
+     justify-content: end;
+
+}
+
+.book-title{
+     font-weight: bolder;
+     font-size: 1.3em;
+}
+
+.btn-del{
+     background-color: red;
+     color:var(--quaternary)
+}
+
+button{
+     border: none;
+     border-radius: 5px;
+}
+
+.btn-del,.btn-change,.btn-edit{
+     width:50px;
+     height:30px;
+}
+
+button:hover{
+     cursor: pointer;
+     opacity: .7;
+}
+
+#blank{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width:100vw;
+     height:100vh;
+     background-color: rgba(0, 0, 0, 0.842);
+     position:absolute;
+     transform: translateY(-100vh);
+
+}
+
+#blank form .edit{
+     display: flex;
+     gap:10px;
+}
+
+#btn-ubah{
+     background-color: green;
+}
+
+.inactive{
+     display:none!important;
+}
+
+@media screen and (max-width : 800px) {
+     #content{
+          flex-direction: column-reverse;
+     }
+}

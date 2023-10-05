@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>INVENTOR</title>
+     <link rel="stylesheet" href="./src/index.css">
+</head>
+<body>
+     <header>
+          <nav>
+               <h1>INVENTOR</h1>
+          </nav>
+     </header>
+     <main>
+          <div id="content">
+               <div class="shelf-book">
+                    <h3>Buku Belum Dibaca</h3>
+                    <div id="list-incomplete"></div>   
+               </div>
+               <div class="shelf-book">
+                    <h3>Buku Sudah Dibaca</h3>
+                    <div id="list-complete"></div>
+               </div>
+               <div class="formBook">
+                    <form id="add-form">
+                         <label for="title">Title :</label>
+                         <input type="text" placeholder="Harry Potter" id="title" required>
+                         <label for="author">Author :</label>
+                         <input type="text" placeholder="JK Rowling" id="author" required>
+                         <label for="year" > Year:</label>
+                         <input type="number" placeholder="2000" min="1800" max="2025" step="1" id="year" required>
+                         <div class="check" >
+                              <input type="checkbox" id="status">
+                              <p>buku sudah dibaca</p>
+                         </div>
+                         <button id="btn-add">Tambah Buku</button>
+                    </form>
+               </div>
+          </div>
+          <div id="blank" class="inactive">
+               <div class="formBook">
+                    <form id="edit-form">
+                         <label for="titleEdit">Title :</label>
+                         <input type="text" placeholder="Harry Potter" id="titleEdit" required>
+                         <label for="authorEdit">Author :</label>
+                         <input type="text" placeholder="JK Rowling" id="authorEdit" required>
+                         <label for="yearEdit" > Year:</label>
+                         <input type="number" placeholder="2000" min="1800" max="2025" step="1" id="yearEdit" required>
+                         <div class="edit" >
+                              <button id="btn-ubah"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/></svg></button>
+                              <button id="btn-batal">Batal</button>
+                         </div>
+                         
+                    </form>
+               </div>
+
+          </div>
+
+     </main>
+     
+
+     <script src="./src/index.js"></script>
+</body>
+</html>
